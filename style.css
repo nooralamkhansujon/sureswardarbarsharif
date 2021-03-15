@@ -1,0 +1,2088 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-shadow: border-box;
+}
+ul {
+    margin:10px;
+    list-style:none;
+}
+a{
+   text-decoration: none !important;
+}
+h1,h2,h3,h4,h5,h6{
+    padding:5px;
+    margin:10px;
+}
+
+p,li{
+    margin:10px;
+}
+html{
+    font-weight:1rem;
+    font-family: var(--roboto-font);
+}
+
+table{
+    color:#05122A !important;
+}
+td,th{
+    text-align:center;
+}
+
+body{
+    /* background:rgb(245, 233, 233); */
+    /* background:#05122A; */
+    background:linear-gradient(to top,#092b69,#05122A);
+}
+
+
+:root{
+    --roboto-font:'Roboto', sans-serif;
+    --green-color:#60e26f;
+    --green-yellow-color:#69C569;
+    --yellow-color:#C7EA4A;
+}
+
+/* scroll button  */
+#scrollbutton{
+    position: fixed;
+    bottom:10px;
+    right:5%;
+    padding:1rem;
+    z-index:6;
+
+}
+
+#scrollbutton button.scrollbtn{
+    background:transparent;
+    border:none;
+    outline:none;
+    font-size:3rem;
+    color:var(--green-yellow-color);
+}
+.showscrollbutton{
+    display:block;
+}
+
+@media screen and (max-width:576px){
+    #scrollbutton button.scrollbtn{
+        font-size:2rem;
+    }
+}
+
+@media (min-width:0px) and (max-width:400px){
+    #scrollbutton{
+        right:20%;
+    }
+    #scrollbutton button.scrollbtn{
+        font-size:1.5rem;
+    }
+
+}
+/* end of scroll btn  */
+
+
+/* global section  */
+.global-header{
+    font-size:35px;
+}
+.global-header,.global-header-2{
+    letter-spacing: 0.1rem;
+    font-weight: 800;
+    color:#009900;
+    font-family: var(--roboto-font);
+    text-shadow: 2px 2px black;
+    text-transform:uppercase;
+    text-align:center;
+    margin:2rem 0.5rem;
+    padding:0 10px;
+}
+
+@media (min-width:0px) and (max-width:776px){
+    .global-header{
+        font-size:25px;
+        /* border:1px solid red; */
+    }
+}
+.global-header-2{
+    font-size:25px;
+    text-align:center;
+}
+
+@media (min-width:0px) and (max-width:776px){
+    .global-header-2{
+        font-size:18px;
+    }
+}
+.global-header-2 span.shazarah-span{
+    color:#DE7F66;
+}
+
+.global-header-3{
+    color:#800052;
+    margin-top:5px;
+    font-size:20px;
+    font-weight:600;
+    text-transform: capitalize;
+}
+
+.global-header-3 span{
+    color: #464646;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+@media (min-width:0px) and (max-width:776px){
+    .global-header-3{
+        font-size:16px;
+        text-align: center;
+        padding-left:10px;
+    }
+}
+.global-header-3 span.sazaran-span{
+    color:#DE7F66;
+}
+span.sazaran-span{
+    color:#DE7F66;
+    margin-left:5px;
+}
+.bold-name{
+    text-transform: uppercase;
+    color:#DE7F66;
+}
+
+.shazarah-section .download-pdf{
+    text-align:center;
+    margin:20px 0;
+    padding:10px;
+    color:#1a1719;
+}
+
+.button-class{
+    text-decoration:none;
+    text-transform: uppercase;
+    padding:10px;
+    color:#fff;
+    font-weight:600;
+    border:1px solid 05122A;
+    border-radius: 10px;
+    background-color: #05122A;
+    transition:all .5s ease;
+    transform: scale(1);
+    font-size:1rem;
+}
+
+.button-class:hover{
+    color:#de7f66;
+    transform: scale(1.1);
+    -webkit-box-shadow: -1px -4px 133px -40px #202131;
+    -moz-box-shadow: -1px -4px 133px -40px #202131;
+    box-shadow: -1px -4px 133px -40px #202131;
+    border:1px solid #1a1719;
+}
+
+.list{
+    color:#de7f66;  
+}
+
+/* end of global section  */
+/* scroll   */
+body::-webkit-scrollbar
+{
+    width:8px;
+}
+body::-webkit-scrollbar-track
+{
+    background:#05122A;
+    border-radius:10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+body::-webkit-scrollbar-thumb{
+    background:linear-gradient(var(--yellow-color),var(--green-yellow-color));
+    border-radius:10px;
+    height:50px;
+    width:50px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+
+}
+body::-webkit-scrollbar-corner{
+   background:var(--green-color);
+}
+/* END  scroll  */
+
+
+/* top nav section  */
+.top-nav{
+    background: linear-gradient(to top,#01ffff,#1276C4);
+}
+.top-nav .wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr 4fr;
+    grid-gap:0.5rem;
+    padding:5px 0;
+    line-height: 30px;
+}
+
+@media screen and (max-width:992px){
+    .top-nav .wrapper{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .top-nav .wrapper .logo-section img{
+        width:100%;
+    }
+}
+/* for showing sidebar button  */
+.top-nav .wrapper .sidebarbutton{
+    font-size:30px;
+    color:#fff;
+    cursor:pointer;
+}
+/* end of for showing sidebar button  */
+.top-nav .wrapper .links-section{
+    padding:0 auto;
+    margin-left:20px;
+}
+.top-nav .wrapper .links-section a{
+    color:#fff;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding:10px;
+    font-size:16px;
+}
+.top-nav .wrapper .links-section a:hover{
+    color:#05122A;
+}
+/* nav section  */
+header{
+    transition: all 2s ease-in;
+}
+.add_in_header_tag{
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    z-index:1;
+}
+
+@media screen and (max-width:776px){
+    .add_in_header_tag{
+        position: relative;
+    }
+}
+.navbar{
+    height:auto;
+    background:linear-gradient(to bottom, #0bb60b,#60e26f);
+}
+.navbar-brand{
+  font-weight:700;
+  font-size:2rem;
+  letter-spacing: 0.5px;
+  text-transform:uppercase;
+  /* background: -webkit-linear-gradient(to right, #7E1A63 , purple);
+  background: -moz-linear-gradient(to right, #7E1A63,  purple);
+  background: linear-gradient(to right, #7E1A63,  purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+@media (min-width:776px) and (max-width:1100px){
+    .navbar-nav {
+        display:flex;
+        justify-content: space-evenly;
+    }
+}
+
+.navbar-brand img{
+    width:100px;
+    height:100px;
+    border:3px solid black;
+    border-radius:10px;
+    object-fit: content;
+}
+
+.navbar-nav  li.nav-item {
+    position: relative;
+    cursor:pointer;
+    width:100%;
+
+}
+@media screen and (min-width:776px){
+    .navbar-nav  li.nav-item {
+       width:auto;
+    }
+}
+
+
+
+.navbar-nav .nav-item .nav-link{
+   color:#fff !important;
+   font-weight:500;
+   font-size:18px;
+   text-transform: uppercase;
+   text-align:center !important;
+}
+
+@media (min-width:776px) and (max-width:1100px){
+    .navbar-nav .nav-item .nav-link{ 
+       font-size:15px;
+    }
+}
+
+
+
+.navbar-nav .nav-item .nav-link span{
+    font-size:15px;
+}
+
+.navbar button.navbar-toggler  {
+    margin:0 auto;
+    outline: none !important;
+}
+
+.navbar-nav .nav-item .nav-link:hover,.navbar-nav .nav-item .nav-link:active{
+    color:#05122A !important;
+}
+.navbar-nav .dropdown{
+    background:rgba(5, 18, 42,0.3);
+    border-radius: 5px;
+    -webkit-box-shadow: -1px 0px 13px 2px rgba(12,97,4,1);
+    -moz-box-shadow: -1px 0px 13px 2px rgba(12,97,4,1);
+    box-shadow: -1px 0px 13px 2px rgba(12,97,4,1);
+    text-align:center;
+
+}
+.navbar-nav .nav-item > .dropdown{
+  position:absolute;
+  top:50%;
+  left:-10%;
+  list-style-type: none;
+  padding-left:0;
+  height:auto;
+  display:none;
+  transition: all 1s ease-in-out;
+  z-index:100;
+  width:250px;
+
+}
+@media (min-width:300px){
+    .navbar-nav .nav-item > .dropdown{
+        left:-2%;
+    }
+}
+@media (min-width:400px){
+    .navbar-nav .nav-item > .dropdown{
+        left:15%;
+    }
+}
+@media (min-width:577px){
+    .navbar-nav .nav-item > .dropdown{
+        left:25%;
+    }
+}
+@media (min-width:777px){
+    .navbar-nav .nav-item > .dropdown{
+        left:35%;
+    }
+}
+
+
+@media (min-width:993px){
+    .navbar-nav .nav-item > .dropdown{
+        top:80%;
+        left:-50px;
+        font-size:0.9rem;
+    }
+}
+
+.navbar-nav li > .dropdown  li{
+    position: relative;
+    color:#ffff !important;
+}
+
+
+.navbar-nav li > .dropdown  li .dropdown{
+    position: absolute;
+    top:74%;
+    left:-5%;
+    color:#05122A;
+    list-style-type: none;
+    padding:0;
+    display:none;
+    width:250px;
+    max-width:100%;
+    z-index:101;
+}
+
+@media (min-width:776px){
+    .navbar-nav li > .dropdown  li .dropdown{
+        left:-4%;
+    }
+}
+
+
+@media screen and (min-width:992px){
+    .navbar-nav li > .dropdown  li .dropdown{
+        top:-10px;left:96%;
+        width:250px;
+    }
+}
+
+
+.navbar-nav li > .dropdown  li:hover > .dropdown,
+.navbar-nav li:hover > .dropdown{
+    display:block;
+}
+
+
+.navbar-nav .dropdown li {
+    margin:2px;
+    padding:5px;
+    text-align: center;
+    background:#05122A;
+    border-radius: 5px;
+    transition: all .5s ease-in;
+}
+
+.nav-item .dropdown li a {
+    text-decoration: none;
+    color:#fff;
+    text-transform: uppercase;
+    font-size:14px;
+}
+
+@media (min-width:993px){
+    .nav-item .dropdown li a{
+        font-size:0.9rem;
+        word-break: break-all;
+    }
+}
+
+.nav-item li:hover >  a {
+   color:coral;
+}
+.nav-item li:hover{
+    background:rgba(5, 18, 42,0.9);
+}
+/* end of nav section  */
+
+
+.sidebar-section{
+    color:#05122A;
+    height:100vh;
+    position: fixed;
+    top:0;
+    width:250px;
+    left:-100%;
+    border-top-right-radius: 10px;
+    transition: all .5s ease-in-out;
+    background:#fff;
+    border-right:2px solid #0F92D0;
+    z-index:100;
+}
+
+@media screen and (max-width:576px){
+    .sidebar-section{
+       width:100%;
+    }
+}
+.sidebar-section .header{
+    background: linear-gradient(to top,#17BC19,#51DB5E);
+    display:flex;
+    align-items: center;
+    width:100%;
+    height:auto;
+    padding:10px;
+}
+
+.sidebar-section .header img{
+    width:100px;
+}
+
+
+.closebutton span{
+   position: absolute;
+   font-size:3rem;
+   top:0;
+   right:10px;
+   font-family: sans-serif;
+   margin-top:-15px;
+   padding:10px;
+   color:#fff;
+   cursor:pointer;
+   transition: all .5s ease;
+}
+.closebutton span:hover{
+    color:#E04444;
+}
+
+.sidebar-section .sidebar .sidebar-nav{
+    padding:10px;
+    font-size:15px;
+    text-transform:uppercase;
+}
+.sidebar-section .sidebar .sidebar-nav ul{
+    list-style-type: none;
+    text-align: center;
+}
+.sidebar-section .sidebar {
+    background:linear-gradient(to top,rgb(11, 154, 236),rgba(1, 255, 255,0.9));
+    height:100vh;
+}
+.sidebar-section .sidebar .sidebar-nav  a{
+    color:#05122A;
+    transition:color .5s ease;
+}
+.sidebar-section .sidebar .sidebar-nav  a span{
+    color:#009900 ;
+    font-weight: 900;
+    font-size:15px;
+    margin-left:5px;
+}
+.sidebar-section .sidebar .sidebar-nav ul{
+    padding-left:0;
+}
+.sidebar-section .sidebar .sidebar-nav  ul  li{
+    margin:2px 0;
+    position:relative;
+    background:#05122A;
+    cursor: pointer;
+    transition: all .5s ease;
+    border-radius: 5px;
+    padding:10px;
+    border:2px solid #05122A;
+    padding:5px;
+}
+.sidebar-section .sidebar .sidebar-nav  ul > li a {
+    color:#fff;
+}
+.sidebar-section .sidebar .sidebar-nav ul li .dropdown{
+    position: absolute;
+    right:-128%;
+    top:-10px;
+    width:250px;
+    height:auto;
+    display:none;
+    background:rgba(5, 18, 42,0.3);
+    background:#092b69;
+}
+.sidebar-section .sidebar .sidebar-nav ul li .dropdown li .dropdown{
+    right:-260px;
+}
+.sidebar-section .sidebar .sidebar-nav ul li:hover,
+.sidebar-section .sidebar .sidebar-nav ul li .dropdown li:hover{
+   background:rgba(5, 18, 42,0.9);
+}
+
+.sidebar-section .sidebar .sidebar-nav ul li:hover > a,.sidebar-section .sidebar .sidebar-nav ul li .dropdown li:hover >  a{
+    color:#E04444 !important;
+    font-weight: 800;
+}
+
+@media screen and (max-width:776px){
+    .sidebar-section .sidebar .sidebar-nav ul li  .dropdown{
+        top:70%;
+        left:-10px;
+        right:0;
+        z-index:100;
+        width:100%;
+    }
+}
+.sidebar-section .sidebar .sidebar-nav  ul  li:hover > .dropdown{
+    display:block;
+}
+.sidebar-section .sidebar .sidebar-nav ul li .dropdown li a {
+    color:#fff !important;
+}
+.sidebar-section .sidebar .sidebar-nav ul li a {
+    text-decoration:none;
+}
+
+/* for side bar showing and hiding  */
+.showSideBar{
+    left:0;
+}
+/* end of for side bar showing and hiding */
+
+/* spritual section  */
+
+.spritual-section{
+    background-color:#fff;
+    margin-top:-10px;
+}
+.spritual-header{
+    letter-spacing: 0.1rem;
+    font-weight: 800;
+    font-size:35px;
+    color:#009900;
+    font-family: var(--roboto-font);
+    text-shadow: 2px 2px black;
+    text-transform:uppercase;
+    text-align:center;
+}
+
+.spritual-banner {
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    padding:5px;
+    background:linear-gradient(to bottom,purple,#36e0e0,#c3f1f1);
+    border:3px solid #FFC3FF;
+    -webkit-box-shadow: -1px -4px 133px -40px rgba(179,163,179,1);
+    -moz-box-shadow: -1px -4px 133px -40px rgba(179,163,179,1);
+    box-shadow: -1px -4px 133px -40px rgba(179,163,179,1);
+}
+
+
+.spritual-banner .banner-image-list .main-image {
+    display:flex;
+    justify-content: center;
+    width:100%;
+
+}
+.spritual-banner .banner-image-list .main-image div{
+    padding:10px;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    -webkit-box-shadow: -1px -4px 133px -40px rgba(179,163,179,1);
+    -moz-box-shadow: -1px -4px 133px -40px rgba(179,163,179,1);
+    box-shadow: -1px -4px 133px -40px rgba(179,163,179,1);
+}
+.spritual-banner .banner-image-list .main-image div img{
+    margin:10px;
+    width:200px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.spritual-banner .banner-image-list .main-image h4.name{
+    color:#1a1719;
+    font-size:18px;
+    font-weight:800px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    line-height: 25px;
+    width:200px;
+}
+.spritual-banner .banner-image-list .main-image h5.title{
+    color:#009900;
+    font-size:18px;
+    font-weight: 800px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+}
+.spritual-banner .banner-image-list .all-image{
+    display:flex;
+    justify-content: space-evenly;
+    margin-top:1rem;
+    padding:10px;
+    width:100%;
+
+
+}
+
+@media  screen and (max-width:1200px){
+    .spritual-banner .banner-image-list .all-image{
+        display:grid;
+        grid-template-columns:repeat(3,1fr) ;
+    }
+}
+@media  screen and (max-width:768px){
+    .spritual-banner .banner-image-list .all-image{
+        display:grid;
+        grid-template-columns:repeat(2,1fr) ;
+    }
+}
+
+@media  screen and (max-width:576px){
+    .spritual-banner .banner-image-list .all-image{
+        display:grid;
+        grid-template-columns:repeat(1,1fr) ;
+    }
+}
+.spritual-banner .banner-image-list .all-image .single-image{
+    text-align:center;
+    margin-right:5px;
+    /* border:1px solid red; */
+    -webkit-box-shadow: -1px -4px 133px -40px rgba(179,163,179,1);
+    -moz-box-shadow: -1px -4px 133px -40px rgba(179,163,179,1);
+    box-shadow: -1px -4px 133px -40px rgba(179,163,179,1);
+}
+
+.spritual-banner .banner-image-list .all-image .single-image  img{
+    width:150px;
+    height:150px;
+    padding:5px;
+    object-fit: content;
+}
+.spritual-banner .banner-image-list .all-image .single-image h4.name{
+    color:#1a1719;
+    font-size:18px;
+    font-weight:800px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    line-height: 25px;
+    width:200px;
+
+}
+
+.spritual-banner .banner-image-list .all-image .single-image h5.title{
+    color:#009900;
+    font-size:16px;
+    font-weight: 800px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+}
+
+.spritual-section .spritual-footer{
+    background:#1276C4 !important;
+    color:#fff;
+    height:80px;
+    font-size:20px;
+    text-align:center;
+    line-height: 80px;
+    font-weight: 600;
+}
+
+.introduction-title {
+    margin-top:5px;
+    padding:10px;
+    font-size:28px;
+    line-height: 40px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color:#009900;
+    font-family: var(--roboto-font);
+    text-shadow: 2px 2px black;
+    text-align:center;
+}
+.introduction-title .introduction-span{
+    color:#DE7F66;
+    display:block;
+    text-align: center;
+
+}
+
+.spritual-description {
+    font-size:20px;
+    text-transform: capitalize;
+    text-align: justify;
+    word-spacing: 0.2rem;
+}
+
+.spritual-description p{
+    margin:5px;
+}
+
+.koran-title{
+    text-transform: capitalize;
+    word-spacing: 0.2rem;
+    display:block;
+    font-weight: 800;
+    color:#464945;
+}
+
+.koran-description{
+    font-size:18px;
+    word-spacing:5px;
+    text-align: justify;
+}
+.qutation{
+    font-size:25px;
+    font-weight: 800;
+    font-family: sans-serif;
+    margin:5px;
+    color:#DE7F66;
+}
+
+.sura-page{
+    font-weight: 800;
+    color:black;
+    font-size:16px;
+}
+/* end of spritual section  */
+
+/* present custodian section  */
+.present-custodian-section{
+    background:#fff;
+    margin-top:-10px;
+}
+.present-custodian-section .present-custodian-title{
+  padding:10px;
+  color:#009900;
+  font-family: var(--roboto-font);
+  text-shadow: 2px 2px black;
+  text-align:center;
+  font-size:2rem;
+}
+
+.present-custodian-section .present-custodian-description{
+    font-size:20px;
+    text-transform: capitalize;
+    text-align: justify;
+    word-spacing: 0.2rem;
+    margin:10px 0 ;
+    padding:10px 0;
+}
+.committe-title{
+    font-size:20px;
+    text-transform: capitalize;
+    word-spacing: 0.2rem;
+    color:#464945;
+    margin:10px 0;
+    padding:10px 00;
+    font-weight:900;
+}
+.committe-list{
+    padding:5px;
+}
+.committe-list ul {
+    list-style-type:decimal;
+    color:#464945;
+    font-weight:500;
+}
+.committe-list ul li{
+   font-size:20px;
+   color:blue;
+}
+
+
+.committe-list ul li .commite-name-i{
+   padding:5px;
+   color:#800052;
+   font-size:20px;
+   text-transform: capitalize;
+}
+.committe-list ul li .commite-name{
+   padding:5px;
+   color:#05122A;
+   font-size:20px;
+   text-transform: capitalize;
+}
+
+.committe-list ul li.member{
+   color:#E04444;
+}
+/* end of present custodian section  */
+
+/* working section  */
+.working-section{
+    padding:10px 0;
+    background:#fff;
+}
+.working-section .working-section-title{
+    font-size:20px;
+    font-weight:600;
+    color:#05122A;
+    word-spacing: 0.2rem;
+}
+.working-list ul {
+    list-style-type:decimal;
+    font-size:20px;
+    color:#800052;
+    font-weight:600;
+}
+/* end of working section  */
+
+/* founder section  */
+.founder-section,.organizer-section,.income-sources{
+  padding:10px;
+  background:#fff;
+}
+.founder-section .founder-section-title {
+    padding:10px 0;
+    color:#009900;
+    font-family: var(--roboto-font);
+    text-shadow: 2px 2px black;
+    text-align:center;
+    font-size:2rem;
+} 
+
+.founder-section p{
+    font-size:20px;
+    text-transform: capitalize;
+    text-align: justify;
+    word-spacing: 0.2rem;
+}
+/* end of founder section  */
+
+/* organizer-section */
+.organizer-section .organizer-section-title{
+    padding:10px 0;
+    color:#009900;
+    font-family: var(--roboto-font);
+    text-shadow: 2px 2px black;
+    text-align:center;
+    font-size:2rem;
+}
+.organizer-section p{
+    font-size:20px;
+    text-transform: capitalize;
+    text-align: justify;
+    word-spacing: 0.2rem;
+}
+/* end of organizer-section */
+
+/* income-sources section  */
+.income-sources .income-sources-title{
+    padding:10px 0;
+    color:#009900;
+    font-family: var(--roboto-font);
+    text-shadow: 2px 2px black;
+    text-align:center;
+    font-size:2rem;
+}
+
+.income-sources p{
+    font-size:20px;
+    text-transform: capitalize;
+    text-align: justify;
+    word-spacing: 0.2rem;
+}
+/* end of income source  */
+
+
+/* programms  */
+.program-section{
+    background:#fff;
+    padding:10px 0;
+}
+.program-section .program-section-title{
+    padding:10px 0;
+    color:#009900;
+    font-family: var(--roboto-font);
+    text-shadow: 2px 2px black;
+    text-align:center;
+    font-size:2rem;
+}
+.program-section .program-list{
+   padding:10px 0;
+}
+.program-section .program-list ul {
+    list-style-type: decimal;
+}
+.program-section .program-list  li{
+    list-style-type: decimal;
+    font-size:20px;
+    color:#202131;
+    font-weight:600;
+    margin-bottom:10px;
+    text-transform: capitalize;
+}
+@media screen and (max-width:992px){
+    .program-section .program-list  li{
+        font-size:18px;
+    }
+}
+/* end of programms  */
+
+
+/* shazarahsharif page  */
+body{
+    counter-reset: page-counter;
+}
+div.section-page{
+    display:flex;
+    justify-content: center;
+}
+div.section-page::before{
+   counter-increment: page-counter;
+   content:counter(page-counter);
+   font-size:35px;
+   color:#800052;
+   padding:15px 0;
+   font-weight: 800;
+   border-radius: 50%;
+   text-align:center;
+}
+.shazarah-section{
+    background:#fff;
+    padding:10px 0;
+}
+
+.shazarah-section .download-pdf{
+    text-align:center;
+    margin:20px 0;
+    padding:10px;
+    color:#1a1719;
+}
+.shazarah-section .download-pdf p{
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.shazarah-section .download-pdf a{
+    text-decoration:none;
+    text-transform: uppercase;
+    padding:10px;
+    color:#fff;
+    font-weight:600;
+    border:1px solid 05122A;
+    border-radius: 10px;
+    background-color: #05122A;
+    transition:all .5s ease;
+    transform: scale(1);
+}
+
+.shazarah-section .download-pdf a:hover{
+    color:#de7f66;
+    transform: scale(1.2);
+    -webkit-box-shadow: -1px -4px 133px -40px #202131;
+    -moz-box-shadow: -1px -4px 133px -40px #202131;
+    box-shadow: -1px -4px 133px -40px #202131;
+    border:1px solid #1a1719;
+}
+.shazarah-span{
+    color:#DE7F66;
+    display:block;
+    text-align: center;
+}
+
+.shazarah-image {
+    display:block;
+    text-align:center;
+}
+.shazarah-image img{
+    height:40%;
+    width:80%;
+    max-width:500px;
+    max-height:500px;
+    object-fit: cover;
+    border-radius:5px;
+    -webkit-box-shadow: -1px -4px 133px -40px rgba(179,163,179,1);
+    -moz-box-shadow: -1px -4px 133px -40px rgba(179,163,179,1);
+    box-shadow: -1px -4px 133px -40px rgba(179,163,179,1);
+    border:1px solid rgba(179,163,179,1);
+
+}
+.shazarah-image-description{
+   font-size:20px;
+   margin:10px 0;
+   text-align: center;
+   width:80%;
+   padding:10px;
+   margin-left:10%;
+   font-weight: 700;
+   color:#7E1A63;
+   text-transform: uppercase;
+}
+@media screen and (max-width:576px){
+    .shazarah-image-description{
+        font-size:18px;
+    }
+}
+.shazarah-image-footer{
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height:30px;
+}
+.shazarah-image-footer span{
+  font-size:18px;
+}
+
+.shazarah-content-list{
+    padding:10px;
+    margin-top:20px;
+}
+.shazarah-content-list ul{
+    list-style-type: decimal;
+}
+.shazarah-content-list ul li {
+    padding:10px;
+    color:#E04444;
+}
+.shazarah-content-list ul li span{
+    display:inline-block
+}
+.shazarah-content-list ul li  a{
+    /* text-decoration:none; */
+    font-size:18px;
+    color:#464945;
+    text-transform:capitalize;
+}
+.shazarah-content-list ul li  a:hover{
+    color:#E04444;
+}
+/* end of shazarahsharif page  */
+
+
+/* holy sharif page  */
+.holy-sharif-page-content{
+    margin:10px;
+}
+.holy-sharif-page-list ul {
+    list-style-type: upper-alpha;
+}
+.holy-sharif-page-list ul li{
+    padding:5px;
+    color:#E04444;
+}
+.holy-sharif-page-list ul li a {
+    color:#464945;
+    font-size:18px;
+    text-decoration:none;
+    text-transform: capitalize;
+    font-weight:600;
+}
+.holy-sharif-page-list ul li a:hover{
+    color:#E04444;
+}
+.holy-sharif-page-list ul li span{
+    display:inline-block
+}
+
+.through-section{
+    margin:10px;
+    /* padding:10px; */
+}
+
+.through-section .through-title{
+    font-size:30px;
+    padding:5px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+@media screen and (max-width:576px){
+    .through-section .through-title{
+        text-align:center;
+    }
+}
+.through-section .through-list{
+    list-style-type: none;  
+    margin:10px; 
+}
+.through-section .through-list li{
+    padding:5px;
+    text-align: center;
+    font-size:18px;
+    font-weight:600;
+    text-transform: capitalize;
+    font-style: italic;
+}
+.through-span{
+    display:block;
+    color:#DE7F66;
+    text-align: center;
+
+}
+/* end of holy sharif page  */
+
+/* qadria section  */
+.tariqa-e-qaderia-section,.tariqa-e-naqshbandia-section{
+    margin-top:20px;
+}
+.tariqa-e-qaderia-section h3 span,
+.tariqa-e-naqshbandia-section h3 span{
+    font-size:20px;
+    font-weight:900;
+    text-shadow: none;
+    line-height: 30px;
+}
+
+@media screen and (min-width:992px){
+    .tariqa-e-qaderia-section h3{
+        font-size:18px;
+    }
+    .tariqa-e-qaderia-section h3 span,
+    .tariqa-e-naqshbandia-section h3 span{
+        font-size:18px;
+    }
+    .tariqa-e-qaderia-section h3{
+        text-align: center;
+    }
+}
+.tariqa-e-qaderia-list ul,.tariqa-e-naqshbandia-list ul{
+    list-style-type: decimal;
+    margin:10px;
+    width:100%;
+    word-break: break-all;
+}
+.tariqa-e-qaderia-list ul li,.tariqa-e-naqshbandia-list ul li{
+    color:#1a1719;
+    font-size:20px;
+    text-transform:capitalize;
+}
+@media screen and (max-width:992px){
+    .tariqa-e-qaderia-list ul li,.tariqa-e-naqshbandia-list ul li{
+        font-size:18px;
+    }
+}
+.tariqa-e-qaderia-list ul li span,.tariqa-e-naqshbandia-list ul li span{
+    display:inline-block;
+    margin-left:5px;
+}
+/* end of qadria section  */
+
+
+/* rasul-noma-pir page  */
+
+.rasul-noma-content{
+    padding:10px;
+    
+}
+.rasul-noma-content .information address{
+    font-size:18px;
+    font-weight:600;
+    display:flex;
+    flex-direction:column;
+    text-transform: capitalize;
+}
+.rasul-noma-content .image-content{
+    padding:10px;
+    text-align:center;
+    /* border:1px solid red; */
+}
+.rasul-noma-content .image-content img{
+    max-width:500px;
+    max-height:500px;
+    border: 5px solid black;
+    border-radius: 5px;
+}
+.rasul-noma-content .image-content p{
+    margin:10px;
+    color:#800052;
+    text-transform: capitalize;
+    font-size:18px;
+    text-align:center;
+}
+
+@media screen and (max-width:576px){
+    .rasul-noma-content .image-content p{
+        font-size:15px;
+    } 
+}
+
+@media screen and (max-width:576px){
+    .rasul-noma-content .image-content{
+        padding:10px;
+        text-align:center;
+    }
+    .rasul-noma-content .image-content img{
+        width:100%;
+        height:100%;
+        border: 5px solid black;
+        border-radius: 5px;
+    }
+}
+.rasul-noma-content .information address span{
+  margin-left:20px;
+}
+.rasul-noma-content .information address b{
+    color:#DE7F66;
+    text-transform:capitalize;
+}
+.rasul-noma-content .information address ul{
+    list-style-type: lower-alpha;
+    margin-left:20px;
+}
+@media screen and (max-width:576px){
+    .rasul-noma-content .information address{
+        text-align:center;
+        padding:10px;
+    }
+    .rasul-noma-content .information address ul{
+        font-size:16px;
+        text-align:center;
+        word-break: break-all;
+        padding:5px;
+    }
+}
+.rasul-noma-content .family-history-section{
+    font-size:20px;
+    word-spacing:5px;
+    text-align: justify;
+    font-weight: 600;
+    color:#464945;
+}
+
+.family-history-section p.family-history-content{
+    text-transform:capitalize; 
+    word-spacing: 0.2px;
+    text-align: justify;
+}
+
+@media screen and (max-width:576px){
+    .rasul-noma-content .family-history-section{
+        font-size:16px;
+    }
+    .family-history-section p.family-history-content{
+        font-size:16px;
+        text-align:center;
+    }
+}
+
+
+
+@media screen and (max-width:576px){
+    .family-history-section p.family-history-content{
+        text-align:center;
+    }
+}
+
+.family-history-section h5 span{
+    color: #464646;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+.zohra-khatoon p{
+    text-align:center;
+    font-size:15px;
+    color:#E04444;
+    text-transform: uppercase;
+}
+.zohra-khatoon h4{
+    text-transform: uppercase;
+    margin-top:20px;
+}
+.zohra-khatoon h3 .sub-title{
+ color:#DE7F66;
+}
+
+.zohra-khatoon .list ul{
+    list-style-type:decimal;
+    font-size:20px;
+    text-transform: capitalize;
+}
+@media screen and (max-width:576px){
+    .zohra-khatoon .list ul{
+        font-size:18px;
+    }
+}
+.zohra-khatoon .list ul li span{
+    margin:0 10px;
+}
+/* end of rasul-noma-pir page  */
+
+#listofviceroys h4 span{
+    color: #464646;
+    margin:0 5px;
+}
+#listofviceroys h4 span{
+    color: #464646;
+    margin:0 5px;
+}
+#listofviceroys .sub-title{
+    color:#DE7F66;
+    text-align: center;
+    display:block;
+}
+
+#listofviceroys h4 span.shazarah-span{
+    color:#DE7F66;
+    margin:0 5px;
+    display:inline-block;
+}
+
+@media (min-width:0px) and (max-width:776px){
+    #listofviceroys .sub-title{
+        font-size:15px;
+    }
+    #listofviceroys h4{
+        font-size:16px;
+    }
+    #listofviceroys .zohra-khatoon p.sub-title{
+        font-size:15px;
+        text-transform: capitalize;
+        text-align:center;
+        margin:10px;
+    }
+    #listofviceroys .zohra-khatoon .list ul {
+        font-size:18px;
+    }
+    #listofviceroys .zohra-khatoon .list ul li{
+        margin:10px 0;
+    }
+}
+
+/* ma zohora khatoon  */
+.ma-zohura-khatun-section{
+    padding:20px;
+    text-align: center;
+}
+.ma-zohura-khatun-section .family-history-section p{
+   font-size:20px;
+   font-weight:500;
+   text-transform:capitalize;
+   text-align: justify;
+   color: #464646;
+}
+@media (min-width:0px) and (max-width:576px){
+    .ma-zohura-khatun-section .family-history-section p{
+        font-size:16px;
+        text-align: center;
+        padding-left:10px;
+    }
+}
+.ma-zohura-khatun-section .content-image{
+  text-align:center;
+  margin:20px;
+  padding:20px;
+}
+.ma-zohura-khatun-section .content-image p{
+    font-size:18px;
+    margin:10px 0;
+    color:#7E1A63;
+    text-align:center;
+}
+.ma-zohura-khatun-section .content-image img{
+    max-width:500px;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 5px;
+    border: 5px solid black;
+}
+
+@media screen and (max-width:576px){
+    .ma-zohura-khatun-section .content-image{
+        padding:10px;
+        text-align:center;
+    }
+    .ma-zohura-khatun-section .content-image img{
+        width:100%;
+        height:100%;
+        border: 5px solid black;
+        border-radius: 5px;
+    }
+}
+/* end of ma zohora khatoon  */
+
+/* pir-meherullah  section  */
+.pir-meherullah{
+    padding:20px;
+    text-transform: capitalize;
+}
+.pir-meherullah .content{
+  font-size:20px;
+  text-transform: capitalize;
+  text-align: justify;
+}
+.pir-meherullah-content .information{
+    font-size:20px;
+    font-weight:600;
+    display:flex;
+    flex-direction:column;
+}
+
+@media (min-width:0) and (max-width:776px){
+    .pir-meherullah .content{
+       font-size:18px;
+       width:100%;
+    }
+}
+.pir-meherullah-content .information  span{
+    margin-left:20px;
+  }
+.pir-meherullah-content .information b{
+      color:#DE7F66;
+      text-transform:capitalize;
+      margin:0 10px;
+  }
+.pir-meherullah-content .information p{
+    word-spacing: 0.1px;
+}
+.pir-meherullah-content .information p span.qutation{
+  padding:5px;
+}
+.pir-meherullah-content .information p span.bold-name{
+    margin:0;
+}
+.pir-meherullah-content .family-history-section h5 span{
+    font-weight:600;
+    text-transform:capitalize;
+    margin-left:10px;
+    font-size:18px;
+}
+
+.family-history-section .image-content{
+   text-align:center;
+   padding:10px;
+}
+.family-history-section .image-content img{
+    max-width:500px;
+    max-height:500px;
+    border: 5px solid black;
+    border-radius: 5px;
+}
+.family-history-section .image-content p{
+    margin:10px;
+    color:#800052;
+}
+
+@media screen and (max-width:992px){
+    .family-history-section .content-image{
+        padding:10px;
+        text-align:center;
+        /* border:1px solid red; */
+    }
+    .family-history-section .content-image img{
+        width:100%;
+        height:100%;
+        border: 5px solid black;
+        border-radius: 5px;
+    }
+}
+/* end of pir-meherullah  section  */
+
+/* jan sharif sha sureswari  */
+.pir-sureswari .family-history-section h5 {
+    text-align: justify;
+}
+
+.pir-sureswari .family-history-section .spiritual-life p{
+ line-height: 40px;
+ text-align: justify;
+ padding:10px;
+}
+
+.pir-sureswari .family-history-section .spiritual-life p.description{
+    font-size:18px;
+    text-align:center;
+    color:#7E1A63;
+    text-transform: uppercase;
+}
+
+.pir-sureswari .family-history-section .spiritual-life p.description span{
+    text-transform: uppercase;
+}
+.pir-sureswari .family-history-section .spiritual-life {
+    text-align: justify;
+}
+
+.pir-sureswari .family-history-section .image-content p{
+   text-transform: capitalize;
+}
+
+@media screen and (max-width:992px){
+    .pir-sureswari .family-history-section .image-content{
+        padding:10px;
+        text-align:center;
+        width:100%;
+    }
+    .pir-sureswari .family-history-section .image-content img{
+        width:100%;
+        height:100%;
+        border: 5px solid black;
+        border-radius: 5px;
+    }
+    .pir-sureswari  .spiritual-life p{
+        font-size:15px;
+        text-align: justify;
+    }
+    .pir-sureswari .family-history-section .education,
+    .pir-sureswari .family-history-section  .employee{
+        text-align:center;
+        padding:5px;
+    }
+    .pir-sureswari .sureswari-content .information p b{
+        font-size:16px;
+    }
+}
+
+.pir-sureswari .family-history-section .spiritual-life p.description span.qutation{
+    color:#DE7F66;
+    font-size:25px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+.pir-sureswari .information .history-description p{
+    text-transform: capitalize;
+}
+
+
+.pir-sureswari .information p{
+    text-transform: capitalize;
+   
+}
+.pir-sureswari .divine-signs b{
+    color:#800052;
+    text-transform: capitalize;
+    font-size:20px;
+    margin:0 10px;
+    word-spacing: 0.3rem;
+}
+
+.pir-sureswari .divine-signs p{
+    font-size:18px;
+    line-height: 25px;
+}
+
+/* end of sureswari  */
+
+/* pir baba nur sha  */
+.pir-nuri-sha-baba  .content-image{
+    text-align:center;
+    padding:10px;
+}
+.pir-nuri-sha-baba  .content-image p{
+    margin:10px;
+    color:#800052;
+    text-transform: capitalize;
+}
+.pir-nuri-sha-baba  .content-image img{
+    max-width:500px;
+    max-height:500px;
+    border: 5px solid black;
+    border-radius: 5px;
+}
+
+@media screen and (max-width:992px){
+    .pir-nuri-sha-baba  .content-image{
+        padding:10px;
+        text-align:center;
+    }
+    .pir-nuri-sha-baba  .content-image img{
+        width:100%;
+        height:100%;
+        border: 5px solid black;
+        border-radius: 5px;
+    }
+}
+
+.pir-nuri-sha-baba .information,.pir-chunnu-sha-baba .information {
+    line-height: 40px;
+    text-align: justify;
+    padding:10px;
+    font-size:20px;
+    text-transform: capitalize;
+}
+/* end of pir baba nur sha  */
+
+/* pir baba chunnu sha  */
+.pir-chunnu-sha-baba .work-list h3{
+    text-transform: uppercase;
+}
+
+@media (min-width: 0px) and (max-width:992px){
+    .pir-chunnu-sha-baba .work-list h3{
+        text-align:center;
+    } 
+    .pir-chunnu-sha-baba .information{
+        font-size:18px;
+        text-align:center;
+        padding:0 10px;
+        width:100%;
+        text-transform: capitalize;
+    }
+}
+
+.pir-chunnu-sha-baba .work-list ul {
+  list-style-type: decimal;
+  font-size:20px;
+  text-transform: capitalize;
+}
+
+.pir-chunnu-sha-baba .work-list ul li{
+    line-height: 30px;
+    margin:10px;
+}
+
+@media screen and (max-width:768px){
+    .pir-chunnu-sha-baba .work-list ul{
+        text-align:center;
+        font-size:18px;
+    } 
+}
+
+/* end of pir baba chunnu sha  */
+
+/* world spiritual section  */
+.world-spiritual{
+    padding:10px;
+}
+
+.world-spiritual .information{
+    font-size:20px;
+    line-height: 30px;
+    word-spacing:0.3rem;
+}
+
+.world-spiritual .content-section h2{
+    text-transform: uppercase;
+}
+
+.world-spiritual ul li {
+    line-height: 30px;
+    margin:10px;
+}
+
+.world-spiritual .koran-description{
+    font-size:20px;
+}
+@media screen and (max-width:992px){
+    .world-spiritual .information{
+        font-size:16px;
+        padding:10px;
+    } 
+    .world-spiritual .founder-section h2,
+    .world-spiritual .organizer-section h2{
+        font-size:20px;
+        text-shadow: none;
+    }
+    .world-spiritual .founder-section p,
+    .world-spiritual .organizer-section p{
+        font-size:18px;
+    }
+    .world-spiritual ul{
+        font-size:18px;
+    }
+    .world-spiritual .koran-description{
+        font-size:18px;
+    }
+}
+.world-spiritual .spiritualism-content h3,
+.world-spiritual .faith-content h3,
+.world-spiritual .justice-content h3,
+.world-spiritual .peace-content  h3,
+.world-spiritual .divine-culture  h3{
+    text-transform: uppercase;
+    margin:20px;
+}
+.world-spiritual .spiritualism-content .list ul,
+.world-spiritual .faith-content .list ul,
+.world-spiritual .peace-content .list ul,
+.world-spiritual .justice-content .list ul,
+.world-spiritual  .divine-culture .list ul{
+    text-transform: capitalize;
+    font-size:20px;
+    list-style-type: decimal;
+    color:#464646;
+}
+
+@media screen and (max-width:992px){
+    .world-spiritual .spiritualism-content .list ul,
+    .world-spiritual .faith-content .list ul,
+    .world-spiritual .peace-content .list ul,
+    .world-spiritual .justice-content .list ul,
+    .world-spiritual  .divine-culture .list ul{
+        font-size:18px;
+    }
+
+}
+.world-spiritual .program-section,.world-spiritual .income-source{
+    text-transform: capitalize;
+    font-size:20px;
+}
+.world-spiritual .income-source{
+    font-size:20px;
+    line-height: 30px;
+    word-spacing:0.3rem;
+    text-align: justify;
+}
+@media screen and (max-width:992px){
+    .world-spiritual .program-section,.world-spiritual .income-source{
+        font-size:18px;
+    }
+    .world-spiritual .income-source{
+        font-size:18px;
+    }
+}
+
+/* end of world spiritual section  */
+/* moon-sighting-committee */
+
+.moon-sighting-committee .description{
+    text-transform: capitalize;
+    font-size:20px;
+}
+
+@media screen and (max-width:776px){
+    .moon-sighting-committee .description{
+        font-size:18px;
+    }
+}
+/* end of moon-sighting-committee */
+
+
+/* sureswari-books */
+.sureswari-books .information h4{
+    text-transform: uppercase;
+}
+.sureswari-books .information .list ul {
+    list-style-type: decimal;
+}
+.sureswari-books .information .list ul li {
+    font-size:20px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin:10px;
+}
+@media screen and (max-width:992px){
+    .sureswari-books .information .list ul li{
+        font-size:18px;
+    }
+}
+/* end of sureswari-books */
+
+/* spiritual-festivals */
+.spiritual-festivals .list ul {
+    list-style-type: decimal;
+}
+.spiritual-festivals .list ul li {
+    font-size:20px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin:10px;
+}
+@media screen and (max-width:992px){
+    .spiritual-festivals .list ul li{
+        font-size:18px;
+    }
+}
+/* end of spiritual-festivals */
+
+
+/* address all section */
+.address-all{
+    padding:10px;
+    text-align:center;
+}
+.address-all .address-list .single-address{
+    margin:20px 0;
+}
+.address-all .single-address h3{
+    text-transform: uppercase;
+}
+.address-all .single-address address h5{
+    text-transform: uppercase;
+    font-size:20px;
+    color:#009900;
+}
+.address-all .single-address address{
+    font-size:20px;
+    text-transform: uppercase;
+}
+@media screen and (max-width:992px){
+    .address-all .single-address address{
+        font-size:18px;
+    }
+}
+/* end of address all section  */
+
+
+/* footer section  */
+#footer{
+    background:linear-gradient(to bottom,#202131,#00250f);
+    padding:20px 0;
+    color:#fff;
+    font-weight: 500;
+    min-height:500px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    clip-path: polygon(21% 6%, 43% 14%, 100% 0, 100% 100%, 49% 100%, 0 100%, 0 0);
+    z-index:-1000;
+
+}
+
+@media screen and (max-width:768px){
+    #footer{
+        clip-path:none;
+    }
+}
+#footer .content{
+    text-align:center;
+    word-break: break-all;
+    padding:20px;
+    -webkit-box-shadow: -1px -4px 133px -40px #202131;
+    -moz-box-shadow: -1px -4px 133px -40px #202131;
+    box-shadow: -1px -4px 133px -40px #202131;
+    transform: scale(1);
+    transition: all .5s ease;
+    border:10px solid coral;
+    border-radius: 5px;
+    min-height: 300px;
+    background:#05122A;
+}
+#footer .content:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:776px){
+    #footer .content{
+        transform:none;
+        margin-bottom:10px;
+    }
+    #footer .content:hover{
+        transform:none;
+    }
+}
+#footer .content h5{
+    font-size:20px;
+    text-transform: uppercase;
+    color:#E04444;
+}
+#footer .content p{
+    text-transform: uppercase;
+    font-size:18px;
+    word-spacing: 0.2px;
+}
+
+@media screen and (max-width:992px){
+    #footer .content{
+        text-align:center;
+        padding:10px;
+    }
+    #footer .content h5{
+        font-size:16px;
+        text-align:center;
+        /* border:1px solid red; */
+    }
+    #footer .content p{
+       font-size:14px;
+    }
+    #footer .content address{
+        font-size:14px;
+        word-break: break-all;
+    }
+}
+/* end of footer section */
+
+
+/* social links  */
+.social-link{
+    position:fixed;
+    right:-20px;
+    top:45%;
+    margin-right:5px;
+    height:auto;
+    
+}
+
+@media screen and (max-width:576px){
+    .social-link{
+       display:none;
+    }
+}
+.social-link ul{
+    list-style-type: none;
+    font-size:30px;
+    display:flex;
+    flex-direction: column;
+    padding-left:0;
+    justify-content: space-evenly;
+   
+}
+.social-link ul li{
+    width:50px;
+    height:50px;
+    padding:8px;
+    border-radius: 50%;
+    background:linear-gradient(to bottom,rgba(245, 68, 4,0.9),rgba(5, 248, 5, 0.9));
+    position: relative;
+}
+.social-link ul li a{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-49%,-50%);
+}
+.social-link ul li a .fab{
+    text-decoration:none !important;
+  
+}
+.social-link ul li.facebook a{
+   color:rgb(0, 47, 94);
+}
+.social-link ul li.twitter a {
+    color:rgb(84, 245, 245);
+}
+.social-link ul li.youtube a {
+    color:red;
+}
+/* end of social links  */
+
+/* input form  */
+
+.footer-social-link ul{
+    display:flex;
+    list-style-type: none;
+    padding-left:0;
+    margin-top:3rem;
+}
+
+.footer-social-link ul li{
+    font-size:25px;
+    color:#fff;  
+    width:50px;
+    height:50px;
+    padding:8px;
+    border-radius: 50%;
+    background:linear-gradient(to bottom,rgba(245, 68, 4,0.9),rgba(5, 248, 5, 0.9));
+    position: relative;
+    transform:translateY(0);
+    transition: all .5s ease-in-out;
+}
+
+.footer-social-link ul li a {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-49%,-50%);
+    cursor: pointer;
+}
+.footer-social-link ul li a{
+    color:#fff;
+}
+.footer-social-link ul li:hover{
+    transform: translateY(5px);
+    -webkit-box-shadow: -1px 0px 13px 2px rgba(12,97,4,1);
+    -moz-box-shadow: -1px 0px 13px 2px rgba(12,97,4,1);
+    box-shadow: -1px 0px 13px 2px rgba(12,97,4,1);
+}
+
+
+
+.subscribe{
+    display:flex;
+    justify-content: center;
+    padding:10px 0;
+    margin-top:3rem;
+}
+.subscribe .input-form{
+    display:flex;
+}
+.subscribe .input-form input{
+    border-radius:10px;
+    max-width:350px;
+    outline:none;
+    padding:5px;
+    font-weight: 600;
+    border:2px solid #05122A; 
+}
+
+@media screen and (max-width:576px){
+    .subscribe .input-form{
+        flex-direction: column;
+    }
+    .subscribe .input-form input{
+        padding:5px;
+    }
+    .subscribe .input-form button{
+        margin-top:5px;
+        padding:5px;
+        max-width:50%;
+        font-size:15px;
+    }
+}
+
+.subscribe .input-form button{
+    margin-left:5px;
+}
+/* end of input form  */
+
+
+
+/* sureswarif page  */
+
+#pirsureswari .shazarah-content .list{
+   display:flex; 
+   justify-content: center;
+   color:#E04444;
+}

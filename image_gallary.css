@@ -1,0 +1,127 @@
+.image-gallary{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap:10px;
+}
+
+@media screen and (min-width:400px){
+    .image-gallary{
+        grid-template-columns: 1fr 1fr;
+        
+    }
+}
+@media screen and (min-width:776px){
+    .image-gallary{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+
+.single-image {
+    position:relative
+}
+.single-image span{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%) translateY(1000px);
+  font-size:4rem;
+  color:#51DB5E;
+  cursor:pointer;
+  transition: all 1s ease-in-out;
+}
+.single-image span:hover{
+    color:coral;
+}
+.image-gallary .single-image {
+    border:1px solid #51DB5E;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+  
+}
+.image-gallary .single-image:hover{
+    -webkit-box-shadow: 0 4px 15px -2px  gray;
+    -moz-box-shadow: 0 4px 15px -2px  gray;
+    box-shadow: 0 4px 15px -2px gray;
+}
+.image-gallary .single-image img{
+    width:100%;
+    height:100%;
+    min-height:250px;
+    transition: all .5s ease-in;
+    cursor: pointer;
+    object-fit:cover;
+}
+
+.image-gallary .single-image:hover img{
+    transform: scale(1.2);
+    filter: brightness(0.5);
+}
+
+.image-gallary .single-image:hover span{
+    transform:translate(-50%,-50%) translateY(0);
+}
+
+
+/* image modal section  */
+.image-modal{
+    background:rgba(0, 0, 0,0.9);
+    position:fixed;
+    top:0;left:0;right:0;bottom:0;
+    z-index: 10000000;
+    display:flex;
+    justify-content: space-evenly;
+    transition: all .5s ease;
+    display:none;
+
+}
+.showmodal{
+  display:flex;
+}
+.hidemodal{
+    display:none;
+}
+
+.cancel-button{
+    text-align: right;
+    padding:1rem 2rem;
+}
+.cancel-button span{
+    font-size:3rem;
+    color:#51DB5E;
+    cursor:pointer;
+}
+
+.image-modal-content{
+    background:#fff;
+    border:10px solid #51DB5E;
+    border-radius: 10px;
+    flex-grow: 1;
+    max-width:800px;
+    height:auto;
+    overflow:hidden;
+    background: linear-gradient(to bottom ,rgb(128, 0, 82),rgba(5, 18, 42));
+}
+.image-modal-content .image-modal-header {
+    text-align:center;
+    padding:1rem 0;
+    color:#fff;
+    background:#05122A;
+    background: linear-gradient(to bottom ,rgba(5, 18, 42),rgba(11, 59, 150, 0.9));
+}
+.image-modal-content .image-modal-body{
+    width:100%;
+    max-height:500px;
+    padding:1rem;
+    text-align: center;
+}
+.image-modal-content .image-modal-body img{
+    width:100%;
+    height:100%;
+    max-height:350px;
+    object-fit: fill;
+    border:5px solid coral;
+    border-radius: 10px;
+}
+
